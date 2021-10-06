@@ -8,7 +8,7 @@ public class Controller {
         String guess; 
 
         do {
-            guess = view.askNextMove();
+            guess = view.askNextMove(game);
             game.currentAttempts += 1;
 
             if (guess.equals(game.code)) {
