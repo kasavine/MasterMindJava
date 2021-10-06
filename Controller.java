@@ -8,10 +8,11 @@ public class Controller {
         String guess; 
 
         do {
-            guess = view.askNextMove(game);
+            guess = view.askNextGuess(game);
+            game.currentGuess = guess;
             game.currentAttempts += 1;
 
-            if (guess.equals(game.code)) {
+            if (game.currentGuess.equals(game.code)) {
                 view.showWonState(game);
                 return;
             }
@@ -34,6 +35,7 @@ public class Controller {
         game.pieces = "01234567";
         game.attempts = 5;
         game.currentAttempts = 0;
+        game.currentGuess = "";
 
         master.startGame(game, view);
     }

@@ -12,13 +12,15 @@ public class GameView implements IView {
 
     public void showState(Model model) {
         int remaining = model.attempts - model.currentAttempts;
+        int wellPlaced = model.countWellPlaced();
+        int misPlaced = model.countMisplaced();
         System.out.printf("=> You stil have %d attempt(s) to guess.\n", remaining);
-        System.out.printf("=> Well placed pieces: %d \n", remaining); // are correct and in the correct position
-        System.out.printf("=> Misplaced pieces: %d \n", remaining); // are correct but in the wrong position
+        System.out.printf("=> Well placed pieces: %d \n", wellPlaced); // are correct and in the correct position
+        System.out.printf("=> Misplaced pieces: %d \n", misPlaced); // are correct but in the wrong position
 
     }
 
-    public String askNextMove(Model model) {
+    public String askNextGuess(Model model) {
         System.out.printf("\nAttempt number %d. Type your quess: \n", model.currentAttempts);
         var playersGuess = new Scanner(System.in).next(); // Read user input
         return playersGuess;
