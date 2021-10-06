@@ -22,5 +22,4 @@ public class Model {
     public int countMisplaced() {
         return 999;
     }
-    
 }

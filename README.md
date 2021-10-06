@@ -6,5 +6,6 @@
 - [x] interface for View
 - [ ] parsing parameter
 - [ ] default mode for playing alone
-- [ ] logic for wellplaced/misplaced digits
+- [x] logic for wellplaced digits
+- [ ] logic for misplaced digits
 - [ ] better output to play

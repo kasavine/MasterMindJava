@@ -3,10 +3,10 @@ package mastermind_java;
 public class Controller {
 
     public void startGame(Model game, IView view) {
+
         view.showStartGame();
 
         String guess; 
-
         do {
             guess = view.askNextGuess(game);
             game.currentGuess = guess;
@@ -22,13 +22,12 @@ public class Controller {
             }
             view.showState(game);
         } while (game.attempts >= game.currentAttempts);
-
     }
 
     public static void main(String[] args) {
+
         Controller master = new Controller();
         GameView view = new GameView();
-
         Model game = new Model();
 
         game.code = "1234";
