@@ -1,8 +1,8 @@
-## mastermind_java
+## MasterMindJava
 
 - [x] class Model
 - [x] class Controller
-- [x] class View
+- [x] class View -> package with different views
 - [x] interface for View
 - [ ] parsing parameter
 - [ ] default mode for playing alone
